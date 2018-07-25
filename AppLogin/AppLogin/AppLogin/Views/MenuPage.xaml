@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.MenuPage" 
+             Title="Menu">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+
+            <BoxView HeightRequest="20"></BoxView>
+            
+            <Image Source="weight.png" HorizontalOptions="Fill"
+                   VerticalOptions="Center" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView HeightRequest="5"></BoxView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Button x:Name="Btn_page1" Text="Health Record"
+                    BackgroundColor="#D32F2F"
+                    HorizontalOptions="CenterAndExpand"                                
+                    WidthRequest="150" HeightRequest="40"
+                    TextColor="White"
+                    Clicked="GoPage1Clicked"/>
+            </StackLayout>
+
+            <BoxView HeightRequest="5"></BoxView>
+            <Image Source="vaccine.png" HorizontalOptions="Fill"
+                   VerticalOptions="Center" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView HeightRequest="5"></BoxView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Button x:Name="Btn_page2" Text="Vaccine"
+                    BackgroundColor="#D32F2F"
+                    HorizontalOptions="CenterAndExpand"                                
+                    WidthRequest="150" HeightRequest="40"
+                    TextColor="White"
+                    Clicked="GoPage2Clicked"/>
+
+            </StackLayout>
+
+            <BoxView HeightRequest="5"></BoxView>
+            <Image Source="chat.png" HorizontalOptions="Fill"
+                   VerticalOptions="Center" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView HeightRequest="5"></BoxView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Button x:Name="Btn_page3" Text="Comment"
+                    BackgroundColor="#D32F2F"
+                    HorizontalOptions="CenterAndExpand"                                
+                    WidthRequest="150" HeightRequest="40"
+                    TextColor="White"
+                    Clicked="GoPage3Clicked"/>
+
+            </StackLayout>
+
+            <BoxView HeightRequest="5"></BoxView>
+            <Image Source="notifica.png" HorizontalOptions="Fill"
+                   VerticalOptions="Center" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView HeightRequest="5"></BoxView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Button x:Name="Btn_page4" Text="Notification"
+                    BackgroundColor="#D32F2F"
+                    HorizontalOptions="CenterAndExpand"                                
+                    WidthRequest="150" HeightRequest="40"
+                    TextColor="White"
+                    Clicked="GoPage4Clicked"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

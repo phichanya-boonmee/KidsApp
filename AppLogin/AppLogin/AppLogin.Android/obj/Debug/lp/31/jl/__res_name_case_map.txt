@@ -1,0 +1,2 @@
+values/Strings.xml;values/strings.xml
+values/Dimen.xml;values/dimen.xml

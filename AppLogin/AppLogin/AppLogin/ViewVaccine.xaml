@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.ViewVaccine"
+             Title="{Binding Title}"
+             x:Name="VaccinePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="VaccineView"
+                ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                BackgroundColor="{Binding BG}"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"            
+                CachingStrategy="RecycleElement">
+                
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Name}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="10" TextColor="#373434"/>
+                                <Label Text="{Binding Description}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="8" />
+                                
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                    <Label Text="{Binding status}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="8" TextColor="{Binding TxtColor}"/>
+                                    <Image Source="{Binding Img}" WidthRequest="14" HeightRequest="14" HorizontalOptions="End"></Image>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,1 @@
+E:\1\AppLogin\AppLogin\AppLogin.UWP\AppLogin.UWP.csproj;x86

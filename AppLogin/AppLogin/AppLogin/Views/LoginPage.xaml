@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.LoginPage"
+             Title="Login"
+             xmlns:vm="clr-namespace:AppLogin.ViewModels"
+           >
+
+<ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+            
+            <!--<<StackLayout>
+                <Label 
+                BackgroundColor="#D32F2F"
+                Text="Login" FontSize="25" TextColor="White" VerticalTextAlignment="Center"           
+                WidthRequest="500" HeightRequest="55"
+                VerticalOptions="Fill" HorizontalOptions="Fill" />
+            </StackLayout>-->
+
+            <BoxView HeightRequest="20"></BoxView>
+            <Image Source="prescription.png" HorizontalOptions="Fill"
+                   VerticalOptions="Center" WidthRequest="80" HeightRequest="80" />
+            <BoxView HeightRequest="6"/>
+
+            <StackLayout VerticalOptions="FillAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                <Label x:Name="label" Text="Login" FontSize="15" TextColor="#424242" />
+            </StackLayout>
+
+            <BoxView HeightRequest="10"></BoxView>
+            <StackLayout x:Name="UserNameLayout">
+                <Entry x:Name="Entry_Username" Placeholder="Username" PlaceholderColor="#424242"  FontSize="15" Margin="30,0,30,0"/>
+            </StackLayout>
+
+            <StackLayout x:Name="PasswordLayout">
+                <Entry x:Name="Entry_Password" IsPassword="True" Placeholder="Password" PlaceholderColor="#424242"  FontSize="15" Margin="30,0,30,0"/>
+            </StackLayout>
+
+            <BoxView HeightRequest="10"></BoxView>
+            <StackLayout VerticalOptions="Fill">
+                <Button x:Name="Btn_Signin" Text="Sign In"
+                    BackgroundColor="#D32F2F"
+                    HorizontalOptions="CenterAndExpand"                                
+                    WidthRequest="500"
+                    TextColor="White" 
+                    Clicked="OnButtonClicked" Margin="30,0,30,0"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

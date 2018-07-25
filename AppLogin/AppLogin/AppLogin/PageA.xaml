@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.PageA"
+			 Title="Health" BackgroundColor="GhostWhite">
+
+    <ContentPage.Content>
+        
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+
+            <BoxView HeightRequest="10"></BoxView>
+            <Label Text="การประเมินการเจริญเติบโต"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"	
+                HeightRequest="50" FontSize="20"              
+				FontAttributes="Bold"
+         
+				TextColor="#890515"
+               />
+            
+            <BoxView HeightRequest="15"></BoxView>
+			<StackLayout>
+                <Label Text="น้ำหนัก (กิโลกรัม)" TextColor="#373434" FontAttributes="Bold" Margin="30,0,30,0"/>
+                <Entry x:Name="weight" Placeholder="กรอกน้ำหนัก" PlaceholderColor="#424242"  FontSize="12" Margin="30,0,30,0" />
+			</StackLayout>
+            
+			<StackLayout>
+                <Label Text="ส่วนสูง (เซนติเมตร)" TextColor="#373434" FontAttributes="Bold" Margin="30,0,30,0" />
+                <Entry x:Name="height" Placeholder="กรอกส่วนสูง" PlaceholderColor="#424242"  FontSize="12" Margin="30,0,30,0"/>
+			</StackLayout>
+            
+			<StackLayout>
+                <Label Text="เส้นรอบวงของศีรษะ (เซนติเมตร)" TextColor="#373434" FontAttributes="Bold" Margin="30,0,30,0" />
+                <Entry x:Name="surface" Placeholder="กรอกเส้นรอบศรีษะ" PlaceholderColor="#424242"  FontSize="12" Margin="30,0,30,0" />
+			</StackLayout>
+
+            <BoxView HeightRequest="10"></BoxView>
+            <StackLayout VerticalOptions="Fill">
+                <Button x:Name="accept" HorizontalOptions="CenterAndExpand"
+					AnchorY="150" BackgroundColor="#D32F2F" 
+					Text="ยืนยันข้อมูล"  FontAttributes="Bold"
+                    Margin="30,0,30,0"
+                    WidthRequest="500"
+                    TextColor="White" 
+					Clicked="Btn_Onclick"/>
+            </StackLayout>
+            
+            <BoxView HeightRequest="15"></BoxView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+				<Label Text="น้ำหนักอยู่ในเกณฑ์: " XAlign="100" YAlign="200" FontAttributes="Bold"  />
+				<Label x:Name="wresult" FontAttributes="Bold"/>
+			</StackLayout>
+			
+			<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+				<Label Text="ส่วนสูงอยู่ในเกณฑ์: " AnchorX="100" AnchorY="220" FontAttributes="Bold" />
+				<Label x:Name="hresult" FontAttributes="Bold"/>
+			</StackLayout>
+			
+			<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+				<Label Text="ขนาดของศีรษะอยู่ในเกณฑ์:" AnchorX="100" AnchorY="240" FontAttributes="Bold" />
+				<Label x:Name="sresult" FontAttributes="Bold"/>
+			</StackLayout>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>

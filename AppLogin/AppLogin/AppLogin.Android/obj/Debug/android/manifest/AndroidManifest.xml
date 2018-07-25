@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.AppLogin" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <application android:label="AppLogin.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/mother" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/mother" android:label="Kids" android:theme="@style/MainTheme" android:name="md5c9ad29c4cd8869bd7f22104bb60b60da.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <receiver android:enabled="true" android:exported="false" android:label="Connectivity Plugin Broadcast Receiver" android:name="md59628c2715c1bb8febcc7ae8402df0582.ConnectivityChangeBroadcastReceiver" />
+    <receiver android:enabled="true" android:label="Local Notifications Plugin Broadcast Receiver" android:name="md51251ca0436b286678a1cd2c1ca81248e.ScheduledAlarmHandler" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.AppLogin.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.AppLogin" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

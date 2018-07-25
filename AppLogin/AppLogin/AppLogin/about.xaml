@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLogin.about"
+             Title="About" >
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" Orientation="Vertical">
+        <Label Text="Annoucement"  HeightRequest="50" FontSize="20"  
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+               FontAttributes="Bold" TextColor="#890515">
+            
+        </Label>
+        <Image Source="annoucement.png" Focused="Image_Focused" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"></Image>
+        <!--<Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+        <StackLayout Spacing="0" Orientation="Horizontal" BackgroundColor="#FADBD8" VerticalOptions="Start">
+            <Entry Placeholder="comment" MaxLength="50" HeightRequest="100" 
+                   HorizontalOptions="FillAndExpand" PlaceholderColor="#D32F2F" x:Name="comment"></Entry>
+            <Button Text="Send" Clicked="Button_Clicked" VerticalOptions="Start" Margin="0,2,0,0" BackgroundColor="#D32F2F" TextColor="White" >
+            </Button>
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>
